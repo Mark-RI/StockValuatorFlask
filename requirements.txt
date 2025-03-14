@@ -1,7 +1,7 @@
 flask
 pandas_datareader
 numpy
-plotly
+plotly.graph_objects
 yfinance
 requests
 datetime

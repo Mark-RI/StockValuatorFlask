@@ -1,0 +1,11 @@
+flask
+pandas_datareader
+numpy
+scipy.stats
+plotly.graph_objects
+plotly.express
+yfinance
+requests
+datetime
+pandas
+gunicorn

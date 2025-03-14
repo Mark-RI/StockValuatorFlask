@@ -6,7 +6,6 @@ import yfinance as yf
 import requests
 import plotly.express as px
 import plotly.graph_objects as go
-from scipy.stats import linregress
 import numpy as np
 
 

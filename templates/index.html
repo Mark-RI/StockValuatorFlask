@@ -1,1 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financial Analysis</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f9f9f9;
+      }
 
+      .container {
+        text-align: center;
+        max-width: 800px;
+        width: 100%;
+      }
+
+      input[type="text"] {
+        margin-top: 20px;
+        padding: 10px;
+        width: 200px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      .result-text {
+        margin-top: 20px;
+        font-size: 1.2em;
+        color: #333;
+      }
+
+      .chart {
+        margin-top: 20px;
+        width: 100%;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Financial Analysis</h1>
+      <form method="POST" action="/">
+        <input type="text" name="ticker" placeholder="Enter ticker symbol" required />
+        <button type="submit">Input Ticker</button>
+      </form>
+
+      {% if processed_text %}
+        <div class="result-text">
+          <p>{{ processed_text }}</p>
+        </div>
+      {% endif %}
+
+      {% if quarterly_chart_html %}
+        <div class="chart">
+          {{ quarterly_chart_html | safe }}
+        </div>
+      {% endif %}
+
+      {% if annual_chart_html %}
+        <div class="chart">
+          {{ annual_chart_html | safe }}
+        </div>
+      {% endif %}
+
+      {% if nonlinear_chart_html %}
+        <div class="chart">
+          {{ nonlinear_chart_html | safe }}
+        </div>
+      {% endif %}
+
+      <br>
+      <br>
+
+      {% if price_text_11 %}
+        <div class="result-text">
+          <p>{{ price_text_11 }}</p>
+        </div>
+      {% endif %}
+
+      {% if price_text_12 %}
+        <div class="result-text">
+          <p>{{ price_text_12 }}</p>
+        </div>
+      {% endif %}
+
+      {% if price_text_13 %}
+        <div class="result-text">
+          <p>{{ price_text_13 }}</p>
+        </div>
+      {% endif %}
+
+      {% if price_text_14 %}
+        <div class="result-text">
+          <p>{{ price_text_14 }}</p>
+        </div>
+      {% endif %}
+
+      {% if price_text_15 %}
+        <div class="result-text">
+          <p>{{ price_text_15 }}</p>
+        </div>
+      {% endif %}
+      
+
+      {% if linear_chart_html %}
+        <div class="chart">
+          {{ linear_chart_html | safe }}
+        </div>
+      {% endif %}
+
+      <br>
+      <br>
+
+      {% if price_text_21 %}
+        <div class="result-text">
+          <p>{{ price_text_21 }}</p>
+        </div>
+      {% endif %}
+
+      {% if price_text_22 %}
+        <div class="result-text">
+          <p>{{ price_text_22 }}</p>
+        </div>
+      {% endif %}
+
+      {% if price_text_23 %}
+        <div class="result-text">
+          <p>{{ price_text_23 }}</p>
+        </div>
+      {% endif %}
+
+      {% if price_text_24 %}
+        <div class="result-text">
+          <p>{{ price_text_24 }}</p>
+        </div>
+      {% endif %}
+
+      {% if price_text_25 %}
+        <div class="result-text">
+          <p>{{ price_text_25 }}</p>
+        </div>
+      {% endif %}
+
+      {% if price_text_26 %}
+        <div class="result-text">
+          <p>{{ price_text_26 }}</p>
+        </div>
+      {% endif %}
+    </div>
+  </body>
+</html>

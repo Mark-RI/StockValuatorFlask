@@ -2,7 +2,7 @@ flask
 pandas_datareader
 numpy
 plotly
-yfinance==0.2.66
+yfinance
 requests
 datetime
 pandas

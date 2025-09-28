@@ -3,6 +3,7 @@ import pandas_datareader as pdr
 import pandas as pd
 from datetime import date, datetime, timedelta
 import yfinance as yf
+print("Running yfinance version:", yf.__version__)
 import requests
 import plotly.express as px
 import plotly.graph_objects as go

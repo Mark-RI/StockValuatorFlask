@@ -47,6 +47,9 @@ def index():
         url = f"https://www.alphavantage.co/query?function=CASH_FLOW&symbol={ticker}&apikey={API_KEY}"
         response = requests.get(url)
         data = response.json()
+        print("-----DATA-----")
+        print(data)
+        print("--------------")
 
         def get_quarterly_freecashflows(data):
             cashflow_quaterly = []

@@ -112,6 +112,10 @@ def index():
                 if yfinance_years_list[i] not in years_list:
                     years_list.append(yfinance_years_list[i])
                     cashflows_list.append(yfinance_cashflows_list[i])
+            for n, i in enumerate(cashflows_list):
+                if np.isnan(i):
+                    del cashflows_list[n]
+                    del years_list[n]
             return years_list, cashflows_list
 
         def add_chart(x, y, color, name, title):
